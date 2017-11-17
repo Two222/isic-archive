@@ -1,0 +1,242 @@
+.isic-upload-image-container
+  .container
+    .row
+      .col-lg-12
+        h2 Upload image to dataset
+    .row
+      .col-lg-3
+        .isic-upload-image-upload-container
+          .isic-upload-widget-container
+          .isic-upload-reset-container
+            .isic-upload-list
+            button#isic-upload-reset.btn.btn-secondary.btn-md Reset
+      .col-lg-9
+        form.isic-upload-image-form.form-horizontal
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-filename') Filename
+            .col-sm-10
+              input#isic-upload-image-filename.form-control(
+                type='text',
+                readonly)
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-age') Age
+            .col-sm-10
+              input#isic-upload-image-age.form-control(
+                type='text')
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-sex') Sex
+            .col-sm-10
+              select#isic-upload-image-sex.form-control
+                option(selected, disabled, hidden, value='')
+                option(value='male')
+                  | Male
+                option(value='female')
+                  | Female
+                option(value='unknown')
+                  | Unknown
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-image-type') Image Type
+            .col-sm-10
+              select#isic-upload-image-image-type.form-control
+                option(selected, disabled, hidden, value='')
+                option(value='dermoscopic')
+                  | Dermoscopic
+                option(value='clinical')
+                  | Clinical
+                option(value='overview')
+                  | Overview
+                option(value='unknown')
+                  | Unknown
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-dermoscopic-type') Dermoscopic Type
+            .col-sm-10
+              select#isic-upload-image-dermoscopic-type.form-control
+                option(selected, disabled, hidden, value='')
+                option(value='contact polarized')
+                  | Contact Polarized
+                option(value='contact non-polarized')
+                  | Contact Non-polarized
+                option(value='non-contact polarized')
+                  | Non-contact Polarized
+                option(value='unknown')
+                  | Unknown
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-dx-confirm-type') Dx Confirm Type
+            .col-sm-10
+              select#isic-upload-image-dx-confirm-type.form-control
+                option(selected, disabled, hidden, value='')
+                option(value='histopathology')
+                  | Histopathology
+                option(value='serial imaging showing no change')
+                  | Serial Imaging Showing No Change
+                option(value='single image expert consensus')
+                  | Expert Consensus (3 raters)
+                option(value='unknown')
+                  | Unknown
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-diagnosis') Diagnosis
+            .col-sm-10
+              select#isic-upload-image-diagnosis.form-control
+                option(selected, disabled, hidden, value='')
+                option(value='amp')
+                  | AMP
+                option(value='AIMP')
+                  | AIMP
+                option(value='melanoma')
+                  | Melanoma
+                option(value='melanoma metastasis')
+                  | Melanoma
+                option(value='nevus')
+                  | Nevus
+                option(value='other')
+                  | Other
+                option(value='unknown')
+                  | Unknown
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-benign-malignant') Benign/Malignant
+            .col-sm-10
+              select#isic-upload-image-benign-malignant.form-control
+                option(selected, disabled, hidden, value='')
+                option(value='benign')
+                  | Benign
+                option(value='malignant')
+                  | Malignant
+                option(value='indeterminate')
+                  | Indeterminate
+                option(value='indeterminate/benign')
+                  | Indeterminate favoring benign
+                option(value='indeterminate/malignant')
+                  | Indeterminate favoring malignant
+                option(value='unknown')
+                  | Unknown
+          .form-group
+            label.control-label.isic-upload-image-form-label.col-sm-2(for='isic-upload-image-nevus-type') Nevus Type
+            .col-sm-10
+              select#isic-upload-image-nevus-type.form-control
+                option(selected, disabled, hidden, value='')
+                option(value='blue')
+                  | Blue
+                option(value='combined')
+                  | Combined
+                option(value='nevus NOS')
+                  | Nevus NOS
+                option(value='deep penetrating')
+                  | Deep Penetrating
+                option(value='halo')
+                  | Halo
+                option(value='persistent/recurrent')
+                  | Persistent/Recurrent
+                option(value='pigmented spindle cell of reed')
+                  | Pigmented Spindle Cell of Reed
+                option(value='plexiform spindle cell')
+                  | Plexiform Spindle Cell
+                option(value='special site')
+                  | Special Site
+                option(value='spitz')
+                  | Spitz
+                option(value='unknown')
+                  | Unknown
+          .row
+            .col-lg-12
+              h3 Melanoma Type
+          .row
+            .col-lg-6
+              .form-group
+                label.control-label.isic-upload-image-form-label.col-sm-4(for='isic-upload-image-melanoma-class') Melanoma Class
+                .col-sm-8
+                  select#isic-upload-image-melanoma-class.form-control
+                    option(selected, disabled, hidden, value='')
+                    option(value='melanoma in situ')
+                      | Melanoma In Situ
+                    option(value='invasive melanoma')
+                      | Invasive Melanoma
+                    option(value='recurrent/persistent melanoma, in situ')
+                      | Recurrent/persistent melanoma, In Situ
+                    option(value='recurrent/persistent melanoma, invasive')
+                      | Recurrent/persistent melanoma, Invasive
+                    option(value='melanoma NOS')
+                      | Melanoma NOS
+                    option(value='unknown')
+                      | Unknown
+              .form-group
+                label.control-label.isic-upload-image-form-label.col-sm-4(for='isic-upload-image-mitotic-index') Mitotic Index
+                .col-sm-8
+                  select#isic-upload-image-mitotic-index.form-control
+                    option(selected, disabled, hidden, value='')
+                    option(value='0/mm^2')
+                      | 0/mm^2
+                    option(value='<1/mm^2')
+                      | &lt;1/mm^2
+                    option(value='1/mm^2')
+                      | 1/mm^2
+                    option(value='2/mm^2')
+                      | 2/mm^2
+                    option(value='3/mm^2')
+                      | 3/mm^2
+                    option(value='4/mm^2')
+                      | 4/mm^2
+                    option(value='>5/mm^2')
+                      | &gt;5/mm^2
+                    option(value='unknown')
+                      | Unknown
+              .form-group
+                label.control-label.isic-upload-image-form-label.col-sm-4(for='isic-upload-image-thickness-mm') Thickness (mm)
+                .col-sm-8
+                  input#isic-upload-image-thickness-mm.form-control(
+                    type='text')
+            .col-lg-6
+              .form-group
+                label.control-label.isic-upload-image-form-label.col-sm-4(for='isic-upload-image-melanoma-type') Melanoma Type
+                .col-sm-8
+                  select#isic-upload-image-melanoma-type.form-control
+                    option(selected, disabled, hidden, value='')
+                    option(value='superficial spreading melanoma')
+                      | Superficial Spreading Melanoma
+                    option(value='nodular melanoma')
+                      | Nodular Melanoma
+                    option(value='lentigo maligna melanoma')
+                      | Lentigo Maligna Melanoma
+                    option(value='acral lentiginous melanoma')
+                      | Acral Lentiginous Melanoma
+                    option(value='spindle cell features melanoma')
+                      | Spindle Cell Features Melanoma
+                    option(value='melanoma NOS')
+                      | Melanoma NOS
+                    option(value='unknown')
+                      | Unknown
+              .form-group
+                label.control-label.isic-upload-image-form-label.col-sm-4(for='isic-upload-image-ulcer') Ulcer
+                .col-sm-8
+                  select#isic-upload-image-ulcer.form-control
+                    option(selected, disabled, hidden, value='')
+                    option(value='true')
+                      | Yes
+                    option(value='false')
+                      | No
+                    option(value='unknown')
+                      | Unknown
+              .form-group
+                label.control-label.isic-upload-image-form-label.col-sm-4(for='isic-upload-image-thickness-categorical') Thickness (categorical)
+                .col-sm-8
+                  select#isic-upload-image-thickness-categorical.form-control
+                    option(selected, disabled, hidden, value='')
+                    option(value='< 0.8mm')
+                      | &lt;0.8mm
+                    option(value='> 0.8mm')
+                      | &gt;0.8mm
+                    option(value='1mm')
+                      | 1mm
+                    option(value='2mm')
+                      | 2mm
+                    option(value='3mm')
+                      | 3mm
+                    option(value='4mm')
+                      | 4mm
+                    option(value='5mm')
+                      | 5mm
+                    option(value='unknown')
+                      | Unknown
+          .row
+            .col-lg-10
+            .col-lg-2
+              button#isic-upload-image-submit.btn.btn-primary.btn-md.pull-right Submit

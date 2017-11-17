@@ -178,6 +178,20 @@ router.route('dataset/:id/metadata/register', 'registerMetadata', (id) => {
         });
     dataset.fetch();
 });
+import UploadImageView from './Datasets/UploadImageView';
+router.route('dataset/:id/image/upload', 'uploadImage', (id) => {
+    // Fetch the dataset, then navigate to the view
+    let dataset = new DatasetModel({_id: id})
+        .once('g:fetched', () => {
+            navigateToIfCanCreateDataset(UploadImageView, {
+                dataset: dataset
+            });
+        })
+        .once('g:error', () => {
+            router.navigate('', {trigger: true});
+        });
+    dataset.fetch();
+});
 
 // Image
 import ImagesView from './ImagesGallery/ImagesView';

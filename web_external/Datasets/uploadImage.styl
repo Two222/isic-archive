@@ -1,0 +1,32 @@
+.isic-upload-image-upload-container
+
+  .g-drop-zone
+    color #737373
+    background-color white
+    border 1px solid #4a8
+    width 250px
+    height 250px
+    line-height 100%
+    font-size 14px
+    font-weight normal
+    // Center content horizontally and vertically
+    display flex
+    align-items center
+    justify-content center
+
+    &:hover
+      background-color white
+      background-image none
+
+    &:active
+      background #6cc8a7
+      box-shadow inset 0 3px 5px rgba(0, 0, 0, 0.125)
+
+    &.g-dropzone-show
+      border 2px dashed #bbb
+
+.isic-upload-image-form
+  .isic-upload-image-form-label
+    font-weight normal
+    white-space nowrap
+    text-align left
